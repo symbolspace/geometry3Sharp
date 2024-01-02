@@ -1,34 +1,49 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <Version>1.0.0.0</Version>
-	<Title>geometry3Sharp</Title>
-    <Authors>Ryan Schmidt</Authors>
+  <PropertyGroup Label="NuGet">
+    <TargetFrameworks>netstandard2.0;net45;net40</TargetFrameworks>
+		<OutputType>Library</OutputType>
+		<Version>1.0.323</Version>
+	  <Title>geometry3Sharp</Title>
+		<AssemblyName>geometry3Sharp</AssemblyName>
+		<Authors>Ryan Schmidt</Authors>
     <Company>gradientspace</Company>
-    <Description>C# library for 2D/3D geometric computing and triangle mesh processing</Description>
+		<Product>geometry3Sharp</Product>
+		<Description>C# library for 2D/3D geometric computing and triangle mesh processing</Description>
     <Copyright>Copyright © Ryan Schmidt 2016</Copyright>
-    <PackageLicenseUrl>https://github.com/gradientspace/geometry3Sharp/blob/master/LICENSE</PackageLicenseUrl>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<RootNamespace>g3</RootNamespace>
+		<SignAssembly>true</SignAssembly>
+		<PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+		<AssemblyOriginatorKeyFile>geometry3Sharp.snk</AssemblyOriginatorKeyFile>
+		<NoWarn>CS1591;NU5125;</NoWarn>
+		
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<IncludeSymbols>true</IncludeSymbols>
+		<PackageId>geometry3Sharp-signed</PackageId>
+		<PackageLicenseUrl>https://github.com/gradientspace/geometry3Sharp/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/gradientspace/geometry3Sharp</PackageProjectUrl>
     <PackageTags>geometry3;graphics;math;approximation;solvers;color;convexhull;meshes;spatial;curves;solids;3d;unity</PackageTags>
-	<RepositoryUrl>https://github.com/gradientspace/geometry3Sharp</RepositoryUrl>
-	<RepositoryType>git</RepositoryType>
+	  <RepositoryUrl>https://github.com/gradientspace/geometry3Sharp</RepositoryUrl>
+	  <RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
-
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
-    <OutputType>Library</OutputType>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-    <RootNamespace>g3</RootNamespace>
-    <AssemblyName>geometry3Sharp</AssemblyName>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Product>geometry3Sharp</Product>
-    <PackageId>geometry3Sharp</PackageId>
-  </PropertyGroup>
-
+	<ItemGroup>
+		<None Include="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
   <ItemGroup>
     <Compile Remove="Properties\AssemblyInfo.cs" />
   </ItemGroup>
 
+
+	<ItemGroup Condition="'$(TargetFramework)'=='net40'">
+		<!--<Reference Include="System.IO.Compression" />-->
+	</ItemGroup>
+	
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
