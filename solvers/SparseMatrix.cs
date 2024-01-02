@@ -285,11 +285,13 @@ namespace g3
 
 
 
+#pragma warning disable CS8981
         struct mval
         {
             public int k;
             public double v;
         }
+#pragma warning restore CS8981
         void get_row_nonzeros(int r, List<mval> buf)
         {
             // TODO: optimize this - exploit symmetry, etc

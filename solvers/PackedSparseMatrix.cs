@@ -20,11 +20,13 @@ namespace g3
     /// </summary>
     public class PackedSparseMatrix
     {
+#pragma warning disable CS8981
         public struct nonzero
         {
             public int j;
             public double d;
         }
+#pragma warning restore CS8981
         public nonzero[][] Rows;
 
         public int Columns = 0;

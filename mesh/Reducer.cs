@@ -7,7 +7,7 @@ namespace g3
 {
 
     /// <summary>
-    /// Mesh Simplication - implementation of Garland & Heckbert Quadric Error Metric (QEM) Simplification
+    /// Mesh Simplication - implementation of Garland &amp; Heckbert Quadric Error Metric (QEM) Simplification
     /// 
     /// </summary>
 	public class Reducer : MeshRefinerBase

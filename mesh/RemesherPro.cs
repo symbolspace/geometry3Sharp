@@ -5,7 +5,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+#if !(NET_2_0 || NET_2_0_SUBSET || NET35)
 using System.Threading.Tasks;
+#endif
 using System.Threading;
 using g3;
 

@@ -10,7 +10,7 @@ namespace g3
     /// <summary>
     /// Convenience functions for working with arrays. 
     ///    - Math functions on arrays of floats/doubles
-    ///    - "automatic" conversion from IEnumerable<T> (via introspection)
+    ///    - "automatic" conversion from IEnumerable&lt;T&gt; (via introspection)
     ///    - byte[] conversions
     ///    - zlib compress/decompress byte[] buffers
     /// </summary>
@@ -513,7 +513,7 @@ namespace g3
         static public byte[] CompressZLib(byte[] buffer, bool bFast)
         {
             MemoryStream ms = new MemoryStream();
-#if G3_USING_UNITY && (NET_2_0 || NET_2_0_SUBSET)
+#if NET40 || NET35 || (G3_USING_UNITY && (NET_2_0 || NET_2_0_SUBSET))
             DeflateStream zip = new DeflateStream(ms, CompressionMode.Compress);
 #else
             DeflateStream zip = new DeflateStream(ms, (bFast) ? CompressionLevel.Fastest : CompressionLevel.Optimal, true);
@@ -558,7 +558,7 @@ namespace g3
 
     /// <summary>
     /// utility class for porting C++ code that uses this kind of idiom:
-    ///    T * ptr = &array[i];
+    ///    T * ptr = &amp;array[i];
     ///    ptr[k] = value
     /// </summary>
     public struct ArrayAlias<T>

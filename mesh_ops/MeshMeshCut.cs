@@ -3,11 +3,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace g3
-{
+namespace g3 {
     /// <summary>
     /// 
     /// 
@@ -584,7 +581,6 @@ namespace g3
                 return false;
             // TODO need to check if we need to save edge AB to connect vertices!
             throw new Exception("not done yet!");
-            return true;
         }
 
 

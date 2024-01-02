@@ -19,7 +19,7 @@ namespace g3
 	///    5) find loops through valid boundary edges (ie connected to splits, or on-plane edges)
 	/// 
 	/// [TODO] could run into trouble w/ on-plane degenerate triangles. Should optionally
-	///   discard any triangles with all vertex distances < epsilon. But this complicates
+	///   discard any triangles with all vertex distances &lt; epsilon. But this complicates
 	///   boundary edge tracking...
 	/// 
 	/// </summary>

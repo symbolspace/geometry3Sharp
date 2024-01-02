@@ -683,7 +683,7 @@ namespace g3
 
 		/// <summary>
 		/// Compute triangle normal, area, and centroid all at once. Re-uses vertex
-		/// lookups and computes normal & area simultaneously. *However* does not produce
+		/// lookups and computes normal &amp; area simultaneously. *However* does not produce
 		/// the same normal/area as separate calls, because of this.
 		/// </summary>
 		public void GetTriInfo(int tID, out Vector3d normal, out double fArea, out Vector3d vCentroid)
@@ -2350,7 +2350,7 @@ namespace g3
 
             // [TODO] vertex_edges!!!
 
-            /** shift triangles **/
+            /* shift triangles */
 
             // find first free triangle, and last valid triangle
             int iLastT = MaxTriangleID - 1, iCurT = 0;
@@ -2397,7 +2397,7 @@ namespace g3
             if (triangle_groups != null)
                 triangle_groups.resize(TriangleCount);
 
-            /** shift edges **/
+            /* shift edges */
 
             // find first free edge, and last used edge
             int iLastE = MaxEdgeID - 1, iCurE = 0;

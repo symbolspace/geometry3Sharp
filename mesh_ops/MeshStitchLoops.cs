@@ -34,11 +34,13 @@ namespace gs
 
         // span represents an interval of loop indices on either side that
         // need to be stitched together
+#pragma warning disable CS8981
         struct span
         {
             public Interval1i span0;
             public Interval1i span1;
         }
+#pragma warning restore CS8981
         List<span> spans = new List<span>();
 
 

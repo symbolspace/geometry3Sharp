@@ -24,7 +24,7 @@ namespace g3
     /// cannot be directly used. Instead of hardcoding behavior, we return the list of shorts
     /// if requested via IMeshBuilder Metadata. Set .WantPerTriAttribs=true or attach flag .PerTriAttribFlag.
     /// After the read finishes you can get the face color list via:
-    ///    DVector<short> colors = Builder.Metadata[0][STLReader.PerTriAttribMetadataName] as DVector<short>;
+    ///    DVector&lt;short&gt; colors = Builder.Metadata[0][STLReader.PerTriAttribMetadataName] as DVector&lt;short&gt;;
     /// (for DMesh3Builder, which is the only builder that supports Metadata)
     /// </summary>
     public class STLReader : IMeshReader
